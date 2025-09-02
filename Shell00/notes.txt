@@ -1,0 +1,11 @@
+cat pour lire un fichier
+ln -s [target] [linking]  	lien symbolique
+touch -t [AAAAMMJJhhmm] [file]
+
+chmod 715 test0
+chmod 714 test1
+chmod 504 test2
+chmod 404 test3
+chmod 641 test4
+chmod 404 test5
+chmod 777 test6

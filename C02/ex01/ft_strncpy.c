@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 
@@ -18,9 +19,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n);
 // {
 // 	char	*src;
 
-// 	src = "proutproutprout";
-// 	char dest[] = "boobsboobsboobs";
-// 	printf("%s", ft_strncpy(dest, src, 5));
+// 	src = "tomatea";
+// 	char dest[] = "cancerdufoie";
+// 	printf("%s\n", strncpy(dest, src, -1));
+// 	printf("%s\n", ft_strncpy(dest, src, 5));
+// 	printf("%s\n", ft_strncpy(dest, src, 7));
+// 	printf("%c\n", dest[0]);
 // }
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
@@ -28,9 +32,15 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
+	printf("prout");
 	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
 		i++;
 	}
 	return (dest);

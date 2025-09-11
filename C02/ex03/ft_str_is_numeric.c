@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hneto--p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/02 20:08:54 by hneto--p          #+#    #+#             */
-/*   Updated: 2025/09/02 20:23:04 by hneto--p         ###   ########.fr       */
+/*   Created: 2025/09/03 20:57:25 by hneto--p          #+#    #+#             */
+/*   Updated: 2025/09/03 20:57:41 by hneto--p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src);
+int	ft_str_is_numeric(char *str);
 
 // int	main(void)
 // {
-// 	char	*src;
-
-// 	src = "boobsboobs";
-// 	char dest[] = "abc";
-// 	ft_strcpy(dest, src);
-// 	printf("%s", dest);
+// 	printf("%d\n", ft_str_is_numeric("0125648684354354"));
+// 	printf("%d\n", ft_str_is_numeric("4465465465424234p12"));
 // }
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_numeric(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (str[i] < '0' || str[i] > '9')
+		{
+			return (0);
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }

@@ -10,16 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-
-char	*ft_strupcase(char *str);
-
-// int	main(void)
-// {
-//     char    str[] = "prout";
-//     printf("%s", ft_strupcase(str));
-// }
-
 char	*ft_strupcase(char *str)
 {
 	int	i;
@@ -35,3 +25,11 @@ char	*ft_strupcase(char *str)
 	}
 	return (str);
 }
+
+// #include <stdio.h>
+
+// int	main(void)
+// {
+//     char    str[] = "prout";
+//     printf("%s", ft_strupcase(str));
+// }

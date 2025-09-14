@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hneto--p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/02 22:33:20 by hneto--p          #+#    #+#             */
-/*   Updated: 2025/09/02 22:51:50 by hneto--p         ###   ########.fr       */
+/*   Created: 2025/09/13 19:16:40 by hneto--p          #+#    #+#             */
+/*   Updated: 2025/09/13 19:16:42 by hneto--p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str);
+int	ft_fibonacci(int index)
+{
+	if (index == 0)
+		return (0);
+	if (index == 1)
+		return (1);
+	if (index < 0)
+		return (-1);
+	return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));
+}
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkj"));
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkjQ"));
+// 	printf("%d\n", ft_fibonacci(7));
 // }
-
-int	ft_str_is_lowercase(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 'a' || str[i] > 'z')
-		{
-			return (0);
-		}
-		i++;
-	}
-	return (1);
-}

@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hneto--p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/02 22:33:20 by hneto--p          #+#    #+#             */
-/*   Updated: 2025/09/02 22:51:50 by hneto--p         ###   ########.fr       */
+/*   Created: 2025/09/11 17:03:23 by hneto--p          #+#    #+#             */
+/*   Updated: 2025/09/11 17:03:25 by hneto--p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str);
-
 // #include <stdio.h>
+
+int	ft_recursive_factorial(int nb)
+{
+	if (nb < 0)
+		return (0);
+	if (nb > 1)
+		return (nb * ft_recursive_factorial(nb - 1));
+	return (1);
+}
 
 // int	main(void)
 // {
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkj"));
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkjQ"));
+// 	printf("%d", ft_recursive_factorial(4));
 // }
-
-int	ft_str_is_lowercase(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 'a' || str[i] > 'z')
-		{
-			return (0);
-		}
-		i++;
-	}
-	return (1);
-}

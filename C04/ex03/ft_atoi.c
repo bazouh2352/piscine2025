@@ -10,27 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-
 int	atoi(char *str);
 
-// int main()
+// #include <stdio.h>
+
+// int	main(void)
 // {
-// 	printf("%d", atoi("21") + 21);
+// 	printf("%d", atoi("     prout----+--+1234ab567"));
 // }
 
 int	atoi(char *str)
 {
 	int	res;
-	int i;
+	int	i;
+	int	negatif;
 
-	res = 0;
 	i = 0;
-	while (str[i] != 0)
+	res = 0;
+	negatif = 1;
+	while (str[i] < '0' || str[i] > '9')
+	{
+		if (str[i] == '-')
+			negatif *= -1;
+		i++;
+	}
+	while (str[i] != 0 && (str[i] >= '0' && str[i] <= '9'))
 	{
 		res *= 10;
 		res += str[i] - '0';
 		i++;
 	}
-	return	res;
+	return (res * negatif);
 }

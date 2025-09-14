@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hneto--p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/02 22:33:20 by hneto--p          #+#    #+#             */
-/*   Updated: 2025/09/02 22:51:50 by hneto--p         ###   ########.fr       */
+/*   Created: 2025/09/13 19:37:01 by hneto--p          #+#    #+#             */
+/*   Updated: 2025/09/13 19:37:03 by hneto--p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str);
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkj"));
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkjQ"));
-// }
-
-int	ft_str_is_lowercase(char *str)
+int	ft_sqrt(int nb)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
+	if (nb < 0)
+		return (0);
+	i = 2;
+	while (i <= nb / 2)
 	{
-		if (str[i] < 'a' || str[i] > 'z')
-		{
-			return (0);
-		}
+		if (nb / i == i)
+			return (i);
 		i++;
 	}
-	return (1);
+	return (0);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	printf("%d\n", ft_sqrt(4));
+// 	printf("%d\n", ft_sqrt(-1));
+// }

@@ -12,7 +12,7 @@
 
 // #include <stdio.h>
 
-void	ft_ft(int *changing_value);
+void	ft_ft(int *nbr);
 
 // int	main(void)
 // {
@@ -24,7 +24,7 @@ void	ft_ft(int *changing_value);
 // 	printf("%d", value);
 // }
 
-void	ft_ft(int *changing_value)
+void	ft_ft(int *nbr)
 {
-	*changing_value = 42;
+	*nbr = 42;
 }

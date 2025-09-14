@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-
 char	*ft_strcapitalize(char *str);
 int		ft_str_is_alphanum(char c);
 
@@ -49,8 +47,10 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
+// #include <stdio.h> 
+
 // int main()
 // {
-//     char    str[] = "hI, HOW aRE YoU? 42WORDS FORTY-TWO; FIFTY+AND+ONE";
-//     printf("%s", ft_strcapitalize(str));
-// }
+// 	    char    str[] = "hI, HOW aRE YoU? 42WORDS FORTY-TWO; FIFTY+AND+ONE";
+// 	    printf("%s", ft_strcapitalize(str));
+// 	}

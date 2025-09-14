@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-
 int	ft_str_is_uppercase(char *str);
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

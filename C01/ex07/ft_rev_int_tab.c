@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_into_tab.c                                  :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hneto--p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 // #include <stdio.h>
 
-void	ft_rev_into_tab(int *tab, int size);
+void	ft_rev_int_tab(int *tab, int size);
 
 // void	print_tab(int *tab, int size);
 
@@ -20,8 +20,8 @@ void	ft_rev_into_tab(int *tab, int size);
 // {
 // 	int	tab1[8] = {1, 2, 3, 4, 5, 6, 7, 8};
 // 	int	tab2[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-// 	ft_rev_into_tab(tab1, 8);
-// 	ft_rev_into_tab(tab2, 9);
+// 	ft_rev_int_tab(tab1, 8);
+// 	ft_rev_int_tab(tab2, 9);
 // 	print_tab(tab1, 8);
 // 	print_tab(tab2, 9);
 // }
@@ -41,7 +41,7 @@ void	ft_rev_into_tab(int *tab, int size);
 // 	printf("\nla size du tableau est %d.\n", size);
 // }
 
-void	ft_rev_into_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
 	int	i;
 	int	cpy;

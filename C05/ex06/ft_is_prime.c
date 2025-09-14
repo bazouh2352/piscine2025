@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hneto--p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/02 22:33:20 by hneto--p          #+#    #+#             */
-/*   Updated: 2025/09/02 22:51:50 by hneto--p         ###   ########.fr       */
+/*   Created: 2025/09/13 19:48:36 by hneto--p          #+#    #+#             */
+/*   Updated: 2025/09/13 19:48:39 by hneto--p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str);
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkj"));
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkjQ"));
-// }
-
-int	ft_str_is_lowercase(char *str)
+int	ft_is_prime(int nb)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
+	if (nb < 2)
+		return (0);
+	i = 2;
+	while (i <= nb / 2)
 	{
-		if (str[i] < 'a' || str[i] > 'z')
-		{
+		if (nb % i == 0)
 			return (0);
-		}
 		i++;
 	}
 	return (1);
 }
+
+// #include <stdio.h>
+// int main (void)
+// {
+//     printf ("%d\n", ft_is_prime(-2));
+//     printf ("%d\n", ft_is_prime(1));
+//     printf ("%d\n", ft_is_prime(7));
+//     printf ("%d\n", ft_is_prime(1021159));
+// }

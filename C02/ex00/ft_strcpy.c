@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-
 char	*ft_strcpy(char *dest, char *src);
+
+// #include <stdio.h>
 
 // int	main(void)
 // {
 // 	char	*src;
 
-// 	src = "boobsboobs";
-// 	char dest[] = "abc";
+// 	src = "guarana";
+// 	char dest[] = "shaw";
 // 	ft_strcpy(dest, src);
 // 	printf("%s", dest);
 // }

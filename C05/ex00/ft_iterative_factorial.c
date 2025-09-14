@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hneto--p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/02 22:33:20 by hneto--p          #+#    #+#             */
-/*   Updated: 2025/09/02 22:51:50 by hneto--p         ###   ########.fr       */
+/*   Created: 2025/09/08 15:40:19 by hneto--p          #+#    #+#             */
+/*   Updated: 2025/09/08 15:40:23 by hneto--p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str);
-
 // #include <stdio.h>
 
-// int	main(void)
+int	ft_iterative_factorial(int nb);
+
+// int	main (void)
 // {
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkj"));
-// 	printf("%d\n", ft_str_is_lowercase("abjdehflkjQ"));
+// 	printf("%d\n", ft_iterative_factorial(5));
+// 	printf("%d\n", ft_iterative_factorial(3));
+// 	printf("%d\n", ft_iterative_factorial(-1));
 // }
 
-int	ft_str_is_lowercase(char *str)
+int	ft_iterative_factorial(int nb)
 {
-	int	i;
+	int	res;
 
-	i = 0;
-	while (str[i] != '\0')
+	if (nb < 0)
+		return (0);
+	res = 1;
+	while (nb > 0)
 	{
-		if (str[i] < 'a' || str[i] > 'z')
-		{
-			return (0);
-		}
-		i++;
+		res *= nb;
+		nb--;
 	}
-	return (1);
+	return (res);
 }

@@ -1,0 +1,18 @@
+#include <stdio.h>					      |	#ifndef FUNCTIONS_H
+#include <stdbool.h>					      |
+							      >	#define FUNCTIONS_H
+							      >
+							      >	short	file_exists(const char* filename);
+							      >
+							      >	#endif
+
+bool	file_exists(const char* filename)		      <
+{							      <
+	FILE *f = fopen(filename, "r");			      <
+	if (f == NULL)					      <
+	{						      <
+		return (false);				      <
+	}						      <
+	fclose(f);					      <
+	return (true);					      <
+}							      <
